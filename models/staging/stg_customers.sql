@@ -1,0 +1,7 @@
+{{ config(materialized='view') }}
+
+SELECT
+    CUSTOMER_ID,
+    UPPER(CUSTOMER_NAME) AS CUSTOMER_NAME,
+    CITY
+FROM MY_DB.RAW.CUSTOMERS
